@@ -7,7 +7,7 @@ const Othello = function (container) {
     this.width = this.canvas.width;
     this.cellwidth = this.width / 8;
 
-    this.backgroundcolor = "#c7d6c9";
+    this.backgroundcolor = "#fafaf7";
     this.linecolor = "#FFFFFF";
 
     this.accent = -1;
