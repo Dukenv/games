@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pic Puzzle - Picture Puzzle Game developed by Amar Jondhalekar</title>
+    <link rel="stylesheet" href="Jquery/jquery-ui.css">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-42262505-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-42262505-1', {cookie_flags: 'SameSite=None;Secure'});
+        </script>
+    <style>
+	    body{margin:auto;}
+        #puzzle{width:600px;margin:auto;}
+        .tile{
+            background-image:url('Img/dino1.jpg');
+            width:200px;
+            height:200px;
+            float:left;
+            border:1px solid silver;
+            box-sizing:border-box;
+        }
+        #tile1 { background-position:0 0 }
+        #tile2 { background-position:-200px -0px }
+        #tile3 { background-position:-400px -0px }
+        #tile4 { background-position:-0 -200px }
+        #tile5 { background-position:-200px -200px }
+        #tile6 { background-position:-400px -200px }
+        #tile7 { background-position:-0 -400px }
+        #tile8 { background-position:-200px -400px }
+        #tile9 { background-position:-400px -400px }
+
+		#popup{position:absolute;width:100%;
+        background:rgba(0,0,0,0.5);top:25%;
+        text-align:center;color:#fff;padding:20px;}
+    </style>
+</head>
+<body>
+    <p style="text-align:center;"> Picture Puzzle </p>
+    <div id="puzzle" class="sortable"> <!--Sortable class to sort the elements by using jquery-->
+        <div id='tile1' class='tile'></div>
+        <div id='tile2' class='tile'></div>
+        <div id='tile3' class='tile'></div>
+        <div id='tile4' class='tile'></div>
+        <div id='tile5' class='tile'></div>
+        <div id='tile6' class='tile'></div>
+        <div id='tile7' class='tile'></div>
+        <div id='tile8' class='tile'></div>
+        <div id='tile9' class='tile'></div>
+    </div>
+
+	<div id='popup' style='display:block;'>
+<div id='message'>
+<h1>Puzzle - Picture Puzzle</h1>
+Click on start button to shuffle and rearrage tiles. Solve the 
+puzzle by rearranging them to the picture shown.</div><br/><br/>
+<button id='startBtn' style='display:inline;' onclick="shuffle()">Start</button><br/><br/>
+</div>
+
+    <h1 style="position:absolute;top:0px;right:0px;padding:10px;" id='timer'></h1>
+
+    <script src="jquery-3.6.0.min.js"></script>
+    <script src="Jquery/jquery-ui.js"></script>
+
+	<!-- <script src="jquery/touch-dnd.js"></script> -->
+    <script>
+        var sec=0;
+        let timer;
+        function shuffle() {
+			$( "#popup" ).hide('');
+			$('#startBtn').hide();
+            let array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+            array.sort(function(a, b){return 0.5 - Math.random()});
+
+            $('#puzzle').html(''); //empty 
+            for (var i = 0; i < array.length; i++) {
+                $( "#puzzle" ).append("<div id='tile"+array[i]+"' class='tile'></div>"); //get & sort the elements 1-9
+            }
+
+            sec=0;
+            timer = setInterval(function(){  //timer
+                sec=sec+1;
+                $( "#timer" ).html(sec);
+            }, 1000);
+        }
+
+
+
+        $( ".sortable" ).sortable({connectWith: ".sortable"}, //connect with same sortable class
+        {
+            update: function( event, ui ) { // update tiles 
+                countRight=0;               //check tiles 0-9 
+                $("#puzzle > div").each((index, elem) => { //to take each div or there index & elem we called each fun().
+                if('tile'+(index+1)==elem.id){ //check every index 
+                    countRight=countRight+1;
+                }
+                if(countRight==9){   //true then it's right.
+                    let completedin=sec;  
+                    sec=0;
+                    clearInterval(timer);   //timer
+                    $( "#timer" ).html('');
+					$('#startBtn').show();
+					$( "#popup" ).show();
+                    $( "#message" ).html("<h2>👏 Congratulations ! You have solved the puzzle in "+completedin+" seconds.");
+                }
+            });
+            }
+        });
+		$("#sortable").disableSelection();
+
+    </script>
+</body>
+</html> 
