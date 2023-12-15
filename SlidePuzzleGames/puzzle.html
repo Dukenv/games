@@ -1,3 +1,4 @@
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -7,11 +8,14 @@ var image_url;
 function jsonFlickrApi(rsp) {
 	if (rsp.stat != "ok") window.location.reload();
 	var i = Math.random();
+	
 	//i = i * 100;
 	//i = Math.ceil(i);
 	//photo = rsp.photos.photo[i];
 	image_url = "./dino1.jpg";
 }
+</script>
+<script type="text/javascript" language="javascript" src="https://api.flickr.com/services/rest/?format=json&sort=random&method=flickr.photos.search&tags=japan,anime,china,beijing,shanghai,yunnan,hongkong,taiwan,korea,usa,europe&api_key=d4270df18b6843be533c471e9a8c57b2">
 </script>
 <script type="text/javascript">
 Array.copy = function(from, to) {
@@ -316,11 +320,10 @@ Stage.prototype.clear = function() {
 		}
 	}
 </script>
+
 </head>
 <body>
 	<center>
-		</br>
-	</br>
 		<canvas id="canvas_stage">Sorry but your browser does not support HTML5 canvas feature, which is required by this sliding puzzle game.</canvas>
 		<p id="puzzle_finished" style="visibility:hidden;">Puzzle finished! Refresh page to restart.</p>
 	</center>
