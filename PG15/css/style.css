@@ -1,0 +1,14 @@
+.field {
+	width: 320px;
+	height: 320px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.cell {
+	width: 80px;
+	height: 80px;
+	font-size: 40px;
+	transition: all 0.3s;
+}
