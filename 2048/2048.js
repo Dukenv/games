@@ -76,7 +76,8 @@ function draw() {
 function writeCookies() {
   // let expires = new Date();
   // expires.setSeconds(expires.getSeconds() + maxAge);
-
+ // Example value for bestScore
+  let bestScore = 0;
 
   let cookie = "bestScore=" + bestScore + ";";
   // cookie += "Expires=" + expires.toUTCString() + ";";
