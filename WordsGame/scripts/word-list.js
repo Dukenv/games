@@ -44,7 +44,33 @@ const wordList = [
         hint: "Imagine a dinosaur that resembles a modern iguana but much larger. It's a herbivore with thumb spikes."
     },
     {
-        word: "apinosaurus",
+        word: "spinosaurus",
         hint: "This dinosaur is known for its sail-like structure on its back. It was a massive predator, even larger than T. rex."
-    },   
+    },
+    {
+        word: "futabasaurus",
+        hint: "Imagine a dinosaur with a long neck and aquatic features. It's a marine reptile that lived during the early Cretaceous period."
+    },
+    {
+        word: "argentinosaurus",
+        hint: "Think of a dinosaur with an incredibly long neck and tail. It's one of the largest sauropod dinosaurs and was a massive, long-necked herbivore."
+    },
+    {
+        word: "kentrosaurus",
+        hint: "Picture a dinosaur with sharp, pointed plates along its back and long spikes on its tail. It's a smaller relative of Stegosaurus and lived during the Late Jurassic period."
+    },
+    {
+        word: "pteranodon",
+        hint: "This is not exactly a dinosaur but a flying reptile. It has a long wingspan, a crest on its head, and is often depicted as soaring through the prehistoric skies."
+    },
+    {
+        word: "Pachycephalosaurus",
+        hint: "Think of a dinosaur with a thick, bony dome on its head. It's known for head-butting, like a prehistoric battering ram."
+    },
+    {
+        word: "Suchomimus",
+        hint: "Imagine a dinosaur with a long snout and crocodile-like features. It's a large theropod dinosaur that lived during the Cretaceous period."
+    },
+
+    
 ];
