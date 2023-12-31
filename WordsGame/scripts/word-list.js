@@ -71,6 +71,17 @@ const wordList = [
         word: "suchomimus",
         hint: "Imagine a dinosaur with a long snout and crocodile-like features. It's a large theropod dinosaur that lived during the Cretaceous period."
     },
-
+    {
+        word: "anchiornis",
+        hint: "Picture a small, feathered dinosaur that lived during the Late Jurassic period. It's known for its bird-like features and colorful plumage."
+    },
+    {
+        word: "eoraptor",
+        hint: "Imagine one of the earliest dinosaurs, a small and carnivorous dinosaur from the Late Triassic period. Its name means 'dawn thief.'"
+    },
+    {
+        word: "torosaurus",
+        hint: "Think of a dinosaur with a large frill and long horns on its frill. It's a close relative of Triceratops and lived during the Late Cretaceous period."
+    },
     
 ];
