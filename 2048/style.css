@@ -252,7 +252,7 @@ button {
 #undoButton {
   background: rgba(210, 180, 140, 0);
 
-  color: rgba(240, 184, 114, 1);
+  color: black;
   width: 30px;
 
   position: absolute;
