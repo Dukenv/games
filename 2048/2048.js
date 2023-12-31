@@ -10,7 +10,7 @@ if (document.cookie == "") {
 
 side = 4;
 board = new Array(4).fill(0).map(() => new Array(4).fill(0));
-colors = ['#cdc1b4', '#eee4da', '#ede0c8', '#ede0c8', '#ede0c8', '#ede0c8', '#ede0c8', '#ede0c8', '#ede0c8', '#ede0c8', '#ede0c8', '#edc22e'];
+colors = ['#cdc1b4', '#eee4da', '#ede0c8', '#ede0c8', '#ede0c8', '#d2b48c', '#d2b48c', '#d2b48c', '#aaaabb', '#aaaabb', '#aaaabb', '#aaaabb'];
 t = 0.1;
 undoBoard = new Array(4).fill(0).map(() => new Array(4).fill(0));
 
