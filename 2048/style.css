@@ -232,7 +232,7 @@ button {
   background: #d2b48c;
   padding: 10px 15px 15px 10px;
   font: bold 23px Times New Roman;
-  color: white;
+  color: black;
   display: block;
   width: 150px;
 
@@ -285,7 +285,7 @@ button {
   top: 110%;
   /* margin-: px; */
   font: 30px Times New Roman;
-  color: #dddddd;
+  color: #696980;
 }
 
 #Best {
@@ -297,7 +297,7 @@ button {
   top: 110%;
   margin-top: 10px;
   font: 30px Times New Roman;
-  color: #dddddd;
+  color: #696980;
 }
 
 #name {
@@ -335,6 +335,6 @@ button {
   margin-left: -50px;
   margin-top: 40px;
   font: 20px Times New Roman;
-  color: white
+  color: black
     /* margin-top: 50%; */
 }
