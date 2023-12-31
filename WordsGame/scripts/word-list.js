@@ -64,11 +64,11 @@ const wordList = [
         hint: "This is not exactly a dinosaur but a flying reptile. It has a long wingspan, a crest on its head, and is often depicted as soaring through the prehistoric skies."
     },
     {
-        word: "Pachycephalosaurus",
+        word: "pachycephalosaurus",
         hint: "Think of a dinosaur with a thick, bony dome on its head. It's known for head-butting, like a prehistoric battering ram."
     },
     {
-        word: "Suchomimus",
+        word: "suchomimus",
         hint: "Imagine a dinosaur with a long snout and crocodile-like features. It's a large theropod dinosaur that lived during the Cretaceous period."
     },
 
