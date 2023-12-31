@@ -1,7 +1,7 @@
 html,
 body {
   /* border: 5px solid black; */
-  background: linear-gradient(280deg, hsl(210, 70%, 80%), #eeffee);
+  background: white;
   /* Disable pull-to-refresh */
   overscroll-behavior: contain;
   /* overflow: hidden; */
