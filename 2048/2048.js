@@ -10,7 +10,7 @@ if (document.cookie == "") {
 
 side = 4;
 board = new Array(4).fill(0).map(() => new Array(4).fill(0));
-colors = ['#cdc1b4', '#eee4da', '#ede0c8', '#f2b179', '#f59563', '#f67c5f', '#f65e3b', '#edcf72', '#edcc61', '#edc850', '#edc53f', '#edc22e'];
+colors = ['#cdc1b4', '#eee4da', '#ede0c8', '#ede0c8', '#ede0c8', '#ede0c8', '#ede0c8', '#ede0c8', '#ede0c8', '#ede0c8', '#ede0c8', '#edc22e'];
 t = 0.1;
 undoBoard = new Array(4).fill(0).map(() => new Array(4).fill(0));
 
@@ -55,7 +55,7 @@ function draw() {
       }
       cellBoard[i][j].style.background = getColor(board[i][j]);
       if (board[i][j] >= 8) {
-        cellBoard[i][j].style.color = 'white';
+        cellBoard[i][j].style.color = 'black';
       } else {
         cellBoard[i][j].style.color = 'black';
       }
