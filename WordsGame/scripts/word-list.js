@@ -83,5 +83,36 @@ const wordList = [
         word: "torosaurus",
         hint: "Think of a dinosaur with a large frill and long horns on its frill. It's a close relative of Triceratops and lived during the Late Cretaceous period."
     },
-    
+    {
+        word: "fossil",
+        hint: "This is not a dinosaur, but it's what remains of a prehistoric organism preserved in rock. Scientists study these to learn about ancient life."
+    },
+    {
+        word: "paleontologist",
+        hint: "This is a scientist who studies fossils and prehistoric life. They often go on expeditions to unearth and understand the secrets of ancient times."
+    },
+    {
+        word: "skeleton",
+        hint: "It's the framework of bones that supports an animal's body. When we talk about dinosaurs, we often discover their history through the fossils."
+    },
+    {
+        word: "prey",
+        hint: "Animals that are eaten by predators."
+    },
+    {
+        word: "predator",
+        hint: "An animal that hunts and kills other animals for food."
+    },
+    {
+        word: "extinct",
+        hint: "When a group of animals or plants completely dies out."
+    },
+    {
+        word: "museum",
+        hint: "This is a place where you can see and learn about fossils, including dinosaur skeletons. It's like a time capsule that preserves the wonders of the past."
+    },
+    {
+        word: "mammal",
+        hint: "Warm-booded animals that drink their mother's milk as babies."
+    },
 ];
