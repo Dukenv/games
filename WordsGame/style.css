@@ -44,14 +44,29 @@ body {
     align-items: center;
 }
 .word-display .letter {
-    width: 28px;
+    width: 25px;
     font-size: 2rem;
     text-align: center;
     font-weight: 600;
     margin-bottom: 40px;
     text-transform: uppercase;
-    border-bottom: 3px solid #000;
+    position: relative; /* Ensure positioning context for pseudo-element */
 }
+
+.word-display .letter::after {
+    content: " _ "; /* Content to be added after each letter */
+    position: absolute;
+    bottom: 0; /* Adjust the positioning as needed */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Additional styling for the dash */
+.word-display .letter::after {
+    color: #000; /* Color of the dash */
+    font-weight: normal; /* Adjust as needed */
+}
+
 .word-display .letter.guessed {
     margin: -40px 0 35px;
     border-color: transparent;
