@@ -115,4 +115,44 @@ const wordList = [
         word: "mammal",
         hint: "Warm-booded animals that drink their mother's milk as babies."
     },
+    {
+        word: "carnivore",
+        hint: "This word describes dinosaurs that primarily ate meat. Think of dinosaurs like Tyrannosaurus Rex, which was a famous dinosaur of this type."
+    },
+    {
+        word: "herbivore",
+        hint: "This term describes dinosaurs that mainly ate plants. Picture dinosaurs like Brachiosaurus or Triceratops, which grazed on vegetation."
+    },
+    {
+        word: "excavation",
+        hint: "It's like carefully digging in the ground to find and discover old bones and treasures from a long, long time ago."
+    },
+    {
+        word: "amber",
+        hint: "Sometimes, we find insects or even tiny dinosaurs trapped inside this shiny, orange-yellow substance."
+    },
+    {
+        word: "prehistory",
+        hint: "Imagine a time so long ago that there were no written records. It's like looking back at the story of Earth and dinosaurs before people started writing things down."
+    },
+    {
+        word: "desert",
+        hint: "Picture a place with lots of sand and very little water. Some dinosaurs lived in places like this, where it was hot and dry, with not many plants around."
+    },
+    {
+        word: "amphibian",
+        hint: "Animal that can live both in water and on land. It's like a creature that can splash around in ponds but also explore the land, just like some ancient animals did."
+    }, 
+    {
+        word: "asteroid",
+        hint: "Imagine a big rock from space. It's like a space rock that played a part in the dinosaur story."
+    },
+    {
+        word: "armor",
+        hint: "This is a tough, protective covering. Some dinosaurs had natural shields that helped keep them safe in a world full of challenges."
+    },
+    {
+        word: "reptile",
+        hint: "Imagine a scaly friend from long ago. Some dinosaurs were like big, ancient creatures—covered in scales and sometimes moving slow and steady, just like animals you might see today."
+    },
 ];
