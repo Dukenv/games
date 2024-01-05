@@ -39,88 +39,92 @@ document.getElementById("check_box").innerHTML=
         <img class="control_img" src="picture/easy.png">
         <div class="wrapper"></div>
     </div>
-</div>`
-let pieces=document.getElementsByClassName("piece");
-restart();
-for( let piece of pieces){
-    piece.onmousedown=function(event){
-        var x=piece.offsetLeft/75,y=piece.offsetTop/75;
-        var px=piece.offsetWidth/75,py=piece.offsetHeight/75;
-        var mx=event.clientX,my=event.clientY;
-        document.onmouseup=function(){
-            this.onmousemove=null;
-            this.onmouseup=null;
-        }
-        document.onmousemove=function(event){
-            if((event.clientX-mx)>50){
-                if( x+px<4 ){
-                    if(ifempty(x+px,y,1,py)){
-                        for(var i=0;i<py;i+=1){
-                            map[x][y+i]=0;
-                            map[x+px][y+i]=1;
-                        }
-                        piece.style.left=(x+1)*75+"px";
-                        x+=1;
-                        mx=event.clientX;
-                    }
-                }
-            }
-            else{
-                if((event.clientX-mx) < -50){
-                    if( x>0){
-                        if(ifempty(x-1,y,1,py)){
-                            for(var i=0;i<py;i+=1){
-                                map[x+px-1][y+i]=0;
-                                map[x-1][y+i]=1;
-                            }
-                            piece.style.left=(x-1)*75+"px";
-                            x-=1;
-                            mx=event.clientX;
-                        }
-                    }
-                }
-            }
-            if((event.clientY-my)>50){
-                if( y+py<5){
-                    if(ifempty(x,y+py,px,1)){
-                        for(var i=0;i<px;i+=1){
-                            map[x+i][y]=0;
-                            map[x+i][y+py]=1;
-                        }
-                        piece.style.top=(y+1)*75+"px";
-                        y+=1;
-                        my=event.clientY;
-                    }
-                }
-            }
-            else{
-                if((event.clientY-my) < -50){
-                    if( y>0){
-                        if(ifempty(x,y-1,px,1)){
-                            for(var i=0;i<px;i+=1){
-                                map[x+i][y+py-1]=0;
-                                map[x+i][y-1]=1;
-                            }
-                            piece.style.top=(y-1)*75+"px";
-                            y-=1;
-                            my=event.clientY;
-                        }
-                    }
-                }
-            }
+</div>`;
 
-            document.onmouseup=function(){
-                if(piece.className=="piece piece_2_2"){
-                    if(x==1 && y==3){
-                        next();
+let pieces = document.getElementsByClassName("piece");
+restart();
+
+for (let piece of pieces) {
+    piece.addEventListener("touchstart", function (event) {
+        currentPiece = piece;
+        touchStartX = event.touches[0].clientX;
+        touchStartY = event.touches[0].clientY;
+    });
+
+    piece.addEventListener("touchmove", function (event) {
+        if (!currentPiece) return;
+
+        let x = currentPiece.offsetLeft / 75,
+            y = currentPiece.offsetTop / 75;
+        let px = currentPiece.offsetWidth / 75,
+            py = currentPiece.offsetHeight / 75;
+        let mx = event.touches[0].clientX,
+            my = event.touches[0].clientY;
+
+        if (Math.abs(mx - touchStartX) > 50) {
+            if (x + px < 4) {
+                if (ifempty(x + px, y, 1, py)) {
+                    for (let i = 0; i < py; i += 1) {
+                        map[x][y + i] = 0;
+                        map[x + px][y + i] = 1;
                     }
+                    currentPiece.style.left = (x + 1) * 75 + "px";
+                    x += 1;
+                    touchStartX = mx;
                 }
-                this.onmousemove=null;
-                this.onmouseup=null;
+            }
+        } else if (Math.abs(mx - touchStartX) < -50) {
+            if (x > 0) {
+                if (ifempty(x - 1, y, 1, py)) {
+                    for (let i = 0; i < py; i += 1) {
+                        map[x + px - 1][y + i] = 0;
+                        map[x - 1][y + i] = 1;
+                    }
+                    currentPiece.style.left = (x - 1) * 75 + "px";
+                    x -= 1;
+                    touchStartX = mx;
+                }
             }
         }
-    }
+
+        if (Math.abs(my - touchStartY) > 50) {
+            if (y + py < 5) {
+                if (ifempty(x, y + py, px, 1)) {
+                    for (let i = 0; i < px; i += 1) {
+                        map[x + i][y] = 0;
+                        map[x + i][y + py] = 1;
+                    }
+                    currentPiece.style.top = (y + 1) * 75 + "px";
+                    y += 1;
+                    touchStartY = my;
+                }
+            }
+        } else if (Math.abs(my - touchStartY) < -50) {
+            if (y > 0) {
+                if (ifempty(x, y - 1, px, 1)) {
+                    for (let i = 0; i < px; i += 1) {
+                        map[x + i][y + py - 1] = 0;
+                        map[x + i][y - 1] = 1;
+                    }
+                    currentPiece.style.top = (y - 1) * 75 + "px";
+                    y -= 1;
+                    touchStartY = my;
+                }
+            }
+        }
+    });
+
+    piece.addEventListener("touchend", function () {
+        currentPiece = null;
+
+        if (piece.className == "piece piece_2_2") {
+            if (x == 1 && y == 3) {
+                next();
+            }
+        }
+    });
 }
+
 
 function restart(){    
     for( let piece of pieces){
