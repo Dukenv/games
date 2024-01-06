@@ -11,7 +11,7 @@ body{
     height: 375px;
     border-radius: 10px;
     background-color: green;
-    background: url(picture/background.png);
+    background: grey;
     border: 10px solid purple;
     transform: translate(-50%,-50%);
 }
@@ -73,6 +73,7 @@ body{
 .chosen{
     background-color: rgba(150,0,150,0.8);
 }
+
 .piece_1_1:hover,.piece_1_2:hover,.piece_2_1:hover,.piece_2_2:hover,.restart:hover,.level:hover{
     cursor: pointer;
 }
