@@ -4,12 +4,12 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script type="text/javascript" src="klotski.js"></script>
-<title>Rescue Stego</title>
+<title>Rescure Stego</title>
 
 <style>
 body {
           overflow: hidden; /* Prevents the display of the scrollbar */
-          zoom: 220%; /* Adjust the percentage as needed */
+          zoom: 250%; /* Adjust the percentage as needed */
 }
 #solve .step , #menu .option {
  display:inline-block;
@@ -25,6 +25,8 @@ div.board {
   position:relative;
   width:40px;
   height:50px;
+  /* background:url('img/bg.png'); */
+
 }
 #inplay {
   display:none;
@@ -33,9 +35,14 @@ div.board {
   height:250px;
   margin: 5px;
   position:relative;
+  background-color: #fdc;
+  /*
+  background:url('img/bg.png');
+  background-size: cover;
+  */
 }
 #inplay:after {
-    content: '';
+    content: ':::::::GATE::::::';
     display: block;
     position:absolute;
     width:100px;
@@ -159,26 +166,18 @@ footer {
 </style>
 </head>
 <body class="content">
-  <h1>RESCUE STEGOSAURUS</h1>
+  <h1 align="center">RESCUE STEGOSAURUS</h1>
   <div id="game">
     <div id="inplay"></div>
-    <!--
-    <div>
-      <span class="minimized" id="showmenu">Levels</span>
-      <div class="topbox" id="menu"></div>
-    </div>
-    -->
   </div>
   <div class="topbox" id="solve"></div>
- 
-   <div>
+    
+    <div></div>
+    <p></p>
     <span class="minimized" id="showmenu">Levels</span>
     <div class="topbox" id="menu"></div>
-  </div>
-  <!-- <span class="minimized" id="showsolve">解答検索</span> -->
-  <hr/>
-  <p>How to play the game:</p>
-  <p>Get the Stegosaurus to the center of the bottom.</p>
+  <p>How to play:</p>
+  <a>Slide the puzzle pieces to guide the Stegosaurus to the GATE at the bottom.</a>
   <footer>Released: 2024-01-06</footer>
 </body>
 </html>
