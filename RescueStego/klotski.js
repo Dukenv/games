@@ -171,15 +171,6 @@ window.onload = () => {
             //ピースの場所
             var x0 = (pos % 4) * scale;
             var y0 = parseInt(pos / 4) * scale;
-            
-            /*
-            var size = {
-                1: {w:1, h:1, c:"#58f"},
-                2: {w:2, h:1, c:"#ff5"},
-                3: {w:1, h:2, c:"#5f8"},
-                4: {w:2, h:2, c:"#f85"},
-            };
-            */
  
             var size = {
                 1: {w:1, h:1, c:"url('img/p1.png')"},
@@ -209,8 +200,11 @@ window.onload = () => {
 
     const goal = () => {
         $id("p13").innerHTML +=
-            '<div style="position:absolute; width:80px; height:20px; top:75px; font-size:15px;transform:rotate(0deg);">'
-            + 'RESCUED' + '</div>';
+            '<div style="position:absolute; width:20px; height:20px;">'
+            +'<img src="img/stegof3.gif" width="100" height="100">'+'</div>'+
+            '<div style="position:absolute; width:80px; height:20px; top:75px; font-size:12px;transform:rotate(0deg);">'
+            + '==RESCUED==' + '</div>';
+
         $id("showsolve").style.display = "none";
     };
     
